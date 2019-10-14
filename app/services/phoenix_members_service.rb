@@ -1,22 +1,20 @@
 class PhoenixMembersService
 
   def characters_by_house(house)
-    get_json("/characters", house)
+    get_json("v1/characters?house=#{house}&orderOfThePhoenix=true")
   end
 
   private
 
   def conn
-    Faraday.new(url: 'https://www.potterapi.com/v1/characters') do |f|
+    Faraday.new(url: 'https://www.potterapi.com') do |f|
       f.adapter Faraday.default_adapter
     end
   end
 
-  def get_json(url, house)
-    response = conn.get do |req|
+  def get_json(url)
+    response = conn.get(url) do |req|
       req.params['key'] = ENV['POTTER_API_KEY']
-      req.params['house'] = house
-      req.params['orderOfThePhoenix'] = true
     end
     JSON.parse(response.body, symbolize_names: true)
   end
