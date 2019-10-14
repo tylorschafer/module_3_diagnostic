@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe Character do
   it 'exists' do
     attrs = {
@@ -7,12 +9,12 @@ describe Character do
       patronus: 'Bird Thing?'
     }
 
-    harry = Member.new(attrs)
+    harry = Character.new(attrs)
 
-    expect(harry).to be_a Member
-    expect(harry[:name]).to eq(attrs[:name])
-    expect(harry[:role]).to eq(attrs[:role])
-    expect(harry[:house]).to eq(attrs[:name])
-    expect(harry[:patronus]).to eq(attrs[:name])
+    expect(harry).to be_a Character
+    expect(harry.name).to eq(attrs[:name])
+    expect(harry.role).to eq(attrs[:role])
+    expect(harry.house).to eq(attrs[:house])
+    expect(harry.patronus).to eq(attrs[:patronus])
   end
 end
