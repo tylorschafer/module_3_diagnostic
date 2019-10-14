@@ -1,0 +1,3 @@
+class PhoneixMembersService
+
+end

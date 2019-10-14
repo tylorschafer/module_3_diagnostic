@@ -16,7 +16,7 @@ describe 'As a user' do
       # Then I should be on page "/search"
       expect(current_path).to eq('/search')
       # Then I should see a total of the number of members for that house. (18 for Griffindor)
-      expect(page).to have_content('18 members')
+      expect(page).to have_content('21 members')
       # Then I should see a list of 18 members
       expect(page).to have_css('.members')
       # And for each of the members I should see:
