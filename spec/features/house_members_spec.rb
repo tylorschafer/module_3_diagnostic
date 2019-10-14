@@ -8,7 +8,9 @@ describe 'As a user' do
       visit '/'
       # And I Select "Griffindor" from the select field
       # (Note: Use the existing select field)
-      select "Griffindor", from: 'nav navbar-nav'
+      within '.select-field' do
+        select 'Gryffindor'
+      end
       # And I click "Search For Members"
       click_on 'Search For Members'
       # Then I should be on page "/search"
