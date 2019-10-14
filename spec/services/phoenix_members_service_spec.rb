@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe PhoenixMembersService do
+describe PhoenixMembersService, :vcr do
   it "Returns members by house" do
     search = subject.characters_by_house('Gryffindor')
 

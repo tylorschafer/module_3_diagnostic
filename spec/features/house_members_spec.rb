@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 # As a user,
-describe 'As a user' do
+describe 'As a user', :vcr do
   describe 'From the root path' do
     it 'I can search order of the phoenix members by house with the dropdown menu' do
       visit '/'
