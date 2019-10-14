@@ -16,11 +16,21 @@ gem 'figaro'
 
 group :development, :test do
   gem 'pry'
+  gem 'factory_bot_rails'
+  gem 'capybara'
+  gem 'faker'
+  gem 'vcr'
+  gem 'webmock'
+  gem 'shoulda-matchers'
+  gem 'launchy'
 end
 
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'vcr'
 end
 
 group :development do
