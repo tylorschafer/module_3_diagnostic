@@ -3,10 +3,10 @@
 
 <% facade.characters.each do |char| %>
   <ul class='character'>
-    <li class='name'><%= char.name %></li>
-    <li class='role'><%= char.role %></li>
-    <li class='house'><%= char.house %></li>
-    <li class='patronus'><%= char.patronus %></li>
+    <li class='name'>Name: <%= char.name %></li>
+    <li class='role'>Role: <%= char.role %></li>
+    <li class='house'>House: <%= char.house %></li>
+    <li class='patronus'>Patronus: <%= char.patronus %></li>
   </ul>
 <% end %>
 </section>

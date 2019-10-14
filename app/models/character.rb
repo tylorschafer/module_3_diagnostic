@@ -3,8 +3,8 @@ class Character
 
   def initialize(attributes = {})
     @name = attributes[:name]
-    @role = attributes[:role]
+    @role = attributes[:role] || 'none'
     @house = attributes[:house]
-    @patronus = attributes[:patronus]
+    @patronus = attributes[:patronus] || 'none'
   end
 end
