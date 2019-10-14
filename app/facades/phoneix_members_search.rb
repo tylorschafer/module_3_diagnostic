@@ -3,11 +3,11 @@ class PhoneixMembersSearch
     @house = house
   end
 
-  def member_count
-    members.count
+  def character_count
+    characters.count
   end
 
-  def members
+  def characters
     conn = Faraday.new(url: 'https://www.potterapi.com/v1/characters') do |f|
       f.adapter Faraday.default_adapter
       f.params['key'] = ENV['POTTER_API_KEY']
@@ -18,7 +18,11 @@ class PhoneixMembersSearch
       req.params['orderOfThePhoenix'] = true
     end
 
-    JSON.parse(response.body, symbolize_names: true)
+    character_data = JSON.parse(response.body, symbolize_names: true)
+
+    character_data.map do |char_data|
+      Character.new(char_data)
+    end
   end
 
   private

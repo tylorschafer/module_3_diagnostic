@@ -1,12 +1,12 @@
-<h3><%= facade.member_count %> Members</h3>
+<h3><%= facade.character_count %> members</h3>
 <section class='members'>
 
-<% facade.members.each do |mem| %>
-  <ul class='member'>
-    <li class='name'><%= mem.name %></li>
-    <li class='role'><%= mem.role %></li>
-    <li class='house'><%= mem.house %></li>
-    <li class='patronus'><%= mem.patronus %></li>
+<% facade.characters.each do |char| %>
+  <ul class='character'>
+    <li class='name'><%= char.name %></li>
+    <li class='role'><%= char.role %></li>
+    <li class='house'><%= char.house %></li>
+    <li class='patronus'><%= char.patronus %></li>
   </ul>
 <% end %>
 </section>

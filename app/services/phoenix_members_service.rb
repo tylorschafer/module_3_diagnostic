@@ -1,3 +1,3 @@
-class PhoneixMembersService
+class PhoenixMembersService
 
 end
